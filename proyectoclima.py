@@ -12,6 +12,7 @@ def limpiar_coordenadas(coord):
     return coord
 
 app = dash.Dash(__name__)
+app.title = "Análisis Climático - Javier Ramírez"
 server = app.server 
 
 df_global = pd.read_csv('GlobalTemperatures.csv')
