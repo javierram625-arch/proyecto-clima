@@ -74,10 +74,16 @@ fig_inflexion.add_hline(y=baseline, line_dash="dash", line_color="#388e3c",
                         annotation_position="bottom right")
 
 # Gráfica 4: MAPA REGIONAL
+# 1. Aseguramos el orden perfecto para la animación
+df_regiones_anim = df_regiones_anim.sort_values(['Year', 'City'])
+
+# 2. Creamos la figura agregando animation_group
 fig_regiones = px.scatter_mapbox(
     df_regiones_anim, lat='Lat', lon='Lon', 
     color='AverageTemperature', size='AverageTemperature',
-    text='City', animation_frame='Year',
+    text='City', 
+    animation_frame='Year',
+    animation_group='City',  # <-- ¡ESTA ES LA LLAVE MÁGICA!
     center=dict(lat=23.6345, lon=-102.5528), zoom=4,
     mapbox_style="carto-positron",
     title="Impacto Regional: Norte, Centro y Sur",
