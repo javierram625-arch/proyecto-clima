@@ -140,7 +140,7 @@ app.layout = html.Div(style={'backgroundColor': '#f4f7f6', 'padding': '40px 20px
     
     html.Div(style={'maxWidth': '950px', 'margin': 'auto', 'backgroundColor': 'white', 'padding': '40px', 'borderRadius': '12px', 'boxShadow': '0 4px 15px rgba(0,0,0,0.05)'}, children=[
         
-        html.H1("¿Cuándo dejó de ser normal el calor en México?", style={'color': '#2c3e50', 'textAlign': 'center', 'fontWeight': '800'}),
+        html.H1("¿Cuándo dejó de ser normal el calor en México y en el mundo?", style={'color': '#2c3e50', 'textAlign': 'center', 'fontWeight': '800'}),
         html.P("Temperatura histórica global y en México", style={'textAlign': 'center', 'fontSize': '1.2rem', 'color': '#7f8c8d', 'marginBottom': '30px'}),
         html.Hr(style={'borderColor': '#ecf0f1', 'marginBottom': '30px'}),
         
